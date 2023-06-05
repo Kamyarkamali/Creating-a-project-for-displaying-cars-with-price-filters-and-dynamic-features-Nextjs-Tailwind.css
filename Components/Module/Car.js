@@ -1,0 +1,18 @@
+import React from 'react'
+
+function Car(props) {
+    const {image,distance,location,name,model,year,price}=props;
+  return (
+    <div className='py-8 bg-blue-600 m-[11px] rounded-lg flex flex-col items-center hover:scale-105 duration-300'>
+        <img className='w-[250px] m-3 rounded-lg' src={image}/>
+        <h1 className='text-[20px] text-orange-600 font-bold'>{`${name} ${model}`}</h1>
+        <p className='font-bold text-yellow-400 text-xl'>{`${year} ${distance} km`}</p>
+        <div className='flex items-center justify-around w-full py-5'>
+            <p className='text-xl font-bold'>{price} $</p>
+            <img className='w-[22px] rounded-[50%]' src='data:image/png;base64,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'/>
+        </div>
+    </div>
+  )
+}
+
+export default Car
