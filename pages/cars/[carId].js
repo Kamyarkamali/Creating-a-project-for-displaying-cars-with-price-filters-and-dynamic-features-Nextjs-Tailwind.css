@@ -1,14 +1,16 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import carsData from '@/data/carsData';
+import CarsDetailse from '@/Components/template/CarsDetailse';
 
 function CarId() {
     const router=useRouter();
     const {carId}=router.query;
     const carDetailse=carsData[carId-1]
-    console.log(carDetailse)
   return (
-    <div>CarId</div>
+    <div>
+        <CarsDetailse {...carDetailse}/>
+    </div>
   )
 }
 
